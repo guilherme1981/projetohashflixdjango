@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn hashflix:wsgi --log-file -
+web: python manage.py migrate && python manage.py createsuperuser --username=guilherme --email=guilhermevgabriel@gmail.com --password=paviliondm4 && gunicorn hashflix:wsgi --log-file -
