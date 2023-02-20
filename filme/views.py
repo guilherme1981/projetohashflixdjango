@@ -5,9 +5,7 @@ from django.views.generic import TemplateView, ListView, DetailView, FormView, U
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-# Create your views here.
-#def homepage(request):
-    #return render(request, 'homepage.html')
+
 
 class Homepage(FormView):
     template_name = 'homepage.html'
@@ -92,8 +90,3 @@ class Criarconta(FormView):
     def get_success_url(self): #função pede um link como resposta
         return reverse('filme:login')
 
-#def homefilmes(request):
-    #context = {}
-    #lista_filmes = Filme.objects.all()
-    #context['lista_filmes'] = lista_filmes
-    #return render(request, "homefilmes.html", context)
