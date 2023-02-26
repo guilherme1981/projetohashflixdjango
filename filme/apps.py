@@ -9,7 +9,7 @@ class FilmeConfig(AppConfig):
 
     def ready(self):
         from .models import Usuario
-        import Os
+        import os 
 
         email = os.gentenv("EMAIL_ADMIN")
         senha = os.getenv("SENHA_ADMIN")
