@@ -9,9 +9,9 @@ class FilmeConfig(AppConfig):
 
     def ready(self):
         from .models import Usuario
-        import os 
+        import os
 
-        email = os.gentenv("EMAIL_ADMIN")
+        email = os.getenv("EMAIL_ADMIN")
         senha = os.getenv("SENHA_ADMIN")
 
         usuarios = Usuario.objects.filter(email=email)
